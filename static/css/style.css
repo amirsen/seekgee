@@ -1,0 +1,177 @@
+body {
+	font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif, Arial;
+	font-size: 10px;
+	background-color: #f3f3f3;	
+	color: #4A4A4A;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body a:link  {
+	color: #4A4A4A;
+	text-decoration: none;
+}
+body a:hover {
+	text-shadow: 1px 1px 0 rgb(#f1f1f1);
+	color: #186792 ;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Myriad-Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	color: #186792;
+	text-shadow:none;
+	margin : 10px;
+}
+
+p {
+	margin: 10px;
+}
+
+input, textarea {
+	background-color: #fff;
+	border: solid 1px #c1c1c1;
+	color: #4a4a4a;
+	font-size: 10px;
+	margin: 5px;
+	}
+#container {
+	width: 70%;
+	overflow: hidden;
+	position: absolute; left: 15%;
+	margin: 0;
+	padding: 0;
+}
+body a:visited {
+	color: #4A4A4A;
+	text-decoration: none;
+}
+ 
+#topmenu {
+	background: url(/static/img/topmenu.png); 
+	height: 35px;
+	position: absolute; top: 0;
+	width: 99%;
+	border: solid 1px #c1c1c1;
+	border-top: 0;
+	box-shadow: 0px 3px 10px #dfdfdf;
+	overflow: hidden;
+}
+
+
+#topmenu .nav {
+	text-align: center;
+	position: relative;
+	border-right: solid 1px #c1c1c1;
+	width: 7%;
+	float: left;
+	margin-top: 0;
+	height: 100%;
+	padding-top: 10px;
+	display: block;
+}
+
+#topmenu .nav a {
+	margin-top: -10px;
+	padding-top: 10px;
+	display: block;
+	height: 100%;
+	}
+	
+#topmenu .nav a:hover {
+ 	background-image: url(/static/img/topmenu-hover.png);
+	display: block; 
+	height: 100%;
+	padding-top: 10px;
+	margin-top: -10px;
+	#padding-bottom: 10px;
+ }
+ 
+ #main { 	
+ 	background-color: #fff;
+ 	border: solid 1px #c1c1c1;
+ 	margin-top: 55px;
+ 	margin-bottom: 0;	
+ 	position: static;
+ 	width: 99%;
+ }
+ 
+#content {
+	width: 70%;
+	position: relative;
+	
+}
+
+#content .article {
+	position: relative; left: 17%;
+	width: 60%;
+	background-color: #fff;
+	border: solid 1px #c1c1c1;
+	border-radius: 3px;
+}
+
+#content .article .title {
+	font-family: "Myriad-Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	color: #6d6d6d;
+	border-radius: 9px;
+	font-size: 13px;
+	font-weight: bold;
+	width: 90%;
+	height: 20px;
+	position: relative; left: -5%; top: 20%;
+	margin: 5px;
+	border: solid 1px #c6c6c6;
+	box-shadow: 0px 3px 5px #f1f1f1;
+	
+	background-image: url(/static/img/topmenu.png);
+}
+#rightmenu { 
+	width: 30%;
+	border-left: dotted 1px #c1c1c1;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	position: relative;
+ 
+ }
+ 
+ #rightmenu .nav {
+ 	margin-left: 0px;
+ 	
+ 	
+ }
+#main .contact {
+	width: 70%;
+
+}
+
+.ask {
+	position: relative; left: 40%;
+
+}
+
+.ask .input_box {
+	width: 40%;
+	height: 25px;
+
+}
+
+.ask .input_button {
+	height: 25px;
+
+}
+ 	
+.contact .contactform {
+	width: 45%;
+	position: relative;
+ 	overflow: hidden;
+ }
+ 
+ .contact .contactsubmit {
+	position: relative;
+	margin-left: 90px;
+	width: 45%;
+ 	
+ 	}

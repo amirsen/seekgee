@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Questions{% endblock title %}
+{% block content %}
+
+	<div class="ask">
+		<form action="/questions/ask/" method="post">{% csrf_token %}
+			<input class="input_box" type="text" name="question_title" />
+			<input class ="input_button" type="submit" value="Ask"  />
+		</form>
+	</div>
+	
+	<br /><hr /><br />
+	<div class="article">
+		<div class="title">Last 5 questions: </div>
+			{% if latest_questions %}
+				<ul>
+				{% for question in latest_questions %}
+					<li><a href='/questions/{{ question.id }}/'>{{ question.title }}</a></li>
+				{% endfor %}
+				</ul>
+			
+			{% else %}
+				<p>No questions are available.</p>
+			{% endif %}
+	</div>
+{% endblock content %}

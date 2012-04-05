@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ question.title }}{% endblock %}
+{% block content %}
+<h3>{{ question.title }}</h3>
+Publish date: {{ question.pub_date }}, Asked by: {{ question.asked_by }}
+<p>{{ question.desc }}</p>
+{% if question.answer_set.all %}
+	<ul>
+	{% for answer in question.answer_set.all %}
+		<li>{{ answer.answer }}</li>
+	{% endfor %}	
+	</ul>
+{% endif %}
+{% if not question.answer_set.all %}
+	<b>No answer found!</b>
+{% endif %}
+{% endblock content %}
