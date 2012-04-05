@@ -4,7 +4,7 @@ from qaa.models import Question
 
 urlpatterns = patterns('',
                        url(r'^$', 'qaa.views.index'),
-                       url(r'^(?P<pk>\d+)/$',
+                       url(r'^[\w\-]+/(?P<pk>\d+)/[\w\-]+/$',
                            DetailView.as_view(
             model=Question)),
                        url(r'^ask/$', 'qaa.views.ask'),

@@ -5,7 +5,7 @@
 	{% if error_message %}<b style="color: red;">{{ error_message }}</b>{% endif %}
 	<form action="/questions/ask/submit/" method="post">
 		{% csrf_token %}
-		Title: <input type="text" name="title" value="{{ question_title }}" /><br />
+		Title: <input type="text" name="title" value="{% if question_title %}{{ question_title }}{% endif %}" /><br />
 		Category: <select name="category" />
 						{% for category in category_list %}
 							<option value="{{ category.pk }}">{{ category.title }}</option>			

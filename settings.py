@@ -114,6 +114,8 @@ TEMPLATE_DIRS = (
     os.path.join(os.getcwd(), 'templates'),
 )
 
+LOGIN_URL='/login'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,12 +123,16 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'qaa',
+    'accounts',
+    'main',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+AUTH_PROFILE_MODULE = 'accounts.Profile'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

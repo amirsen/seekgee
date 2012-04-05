@@ -15,7 +15,7 @@
 			{% if latest_questions %}
 				<ul>
 				{% for question in latest_questions %}
-					<li><a href='/questions/{{ question.id }}/'>{{ question.title }}</a></li>
+					<li><a href='/questions/{{ question.category|slugify }}/{{ question.id }}/{{ question.title|slugify }}/'>{{ question.title }}</a></li>
 				{% endfor %}
 				</ul>
 			

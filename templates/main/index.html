@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="ask">
+		<form action="/questions/ask/" method="post">{% csrf_token %}
+			<input class="input_box" type="text" name="question_title" />
+			<input class ="input_button" type="submit" value="Ask"  />
+		</form>
+	</div>
+
+	<div class="article">
+		<div class="title">Latest Questions</div>	
+		{% for question in latest_questions %}
+			<a href="/questions/{{ question.id }}/"  >{{ question.title }}</a>
+		{% endfor %}
+	</div>
+	<div class="article">
+		<div class="title">Most active users</div>
+		{% for profile in most_active_profiles %}
+			<a href="/accounts/profile/{{ profile.user.id }}/" >{{ profile.user.username }}</a>
+		{% endfor %}	
+	
+	</div>
+{% endblock content %}
